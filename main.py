@@ -29,4 +29,15 @@ def new_beverage(name, sizes):
         (x >= 1 & x <= 48) for x in sizes):
         return "Invalid beverage"
     
+    # Se valida que los elementos de la lista de tamaños haya sigo ingresada con sus elementos
+    # en orden ascendente comparando la variables en la que fueron almacenados y la variable
+    # temporal que genera la función sorted(), tomando como atributo la misma lista de tamaños.
+    # El verificar la igualdad de estas dos variables nos permite verificar que la lista ingresada
+    # esté ordenada en orden ascendente.
+    if not (sizes == sorted(sizes)):
+        return "Invalid beverage"
+
+    # Finalmente, si el programa aún no ha concluido y retornado "Invalid beverage" en alguna de las
+    # comprobaciones lógicas, se retorna "Valid beverage" siendo que cumple con los requerimientos
+    # establecidos.
     return "Valid beverage"
