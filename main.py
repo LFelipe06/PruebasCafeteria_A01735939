@@ -18,5 +18,15 @@ def new_beverage(name, sizes):
     if not ((len(name) >= 2) & (len(name) <= 15) & name.isalpha()):
         return "Invalid beverage"
     
+    # Se valida que el número de elementos en el input correspondiente a la lista de tamaños
+    # tenga un total de elementos mayor o igual que 1 y menor o igual que 5. 
+
+    # Usando la función isinstance() se corrobora que todos los elementos de la lista sean
+    # números enteros mayores o iguales a 1 y menores o iguales a 48
+    
+    if not (len(sizes) >= 1 & len(sizes) <= 5) & all(
+        (isinstance(x, int)) & 
+        (x >= 1 & x <= 48) for x in sizes):
+        return "Invalid beverage"
     
     return "Valid beverage"
