@@ -24,9 +24,7 @@ def new_beverage(name, sizes):
     # Usando la función isinstance() se corrobora que todos los elementos de la lista sean
     # números enteros mayores o iguales a 1 y menores o iguales a 48
     
-    if not (len(sizes) >= 1 & len(sizes) <= 5) & all(
-        (isinstance(x, int)) & 
-        (x >= 1 & x <= 48) for x in sizes):
+    if not (len(sizes) >= 1) & (len(sizes) <= 5) & all(isinstance(x, int) and 1 <= x <= 48 for x in sizes):
         return "Invalid beverage"
     
     # Se valida que los elementos de la lista de tamaños haya sigo ingresada con sus elementos
