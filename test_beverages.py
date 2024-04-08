@@ -51,22 +51,25 @@ def test_beverage_11():
 
 # Numero de elementos de la lista entre 1 y 5
 def test_beverage_12():
+    assert new_beverage("PinkDrink",[12,24]) == "Valid beverage"
+    
+def test_beverage_13():
     assert new_beverage("PinkDrink",[]) == "Valid beverage"
 
-def test_beverage_13():
+def test_beverage_14():
     assert new_beverage("PinkDrink",[6,12,24,36,48,10]) == "Valid beverage"
 
 # Primera variable es un string
-def test_beverage_14():
+def test_beverage_15():
     assert new_beverage("YogurtBerryFrap",[12,24,36]) == "Valid beverage"
 
-def test_beverage_15():
+def test_beverage_16():
     assert new_beverage([6,12,24],"YogurtBerryFrap") == "Valid beverage"
 
 # Una sola coma separa los elementos de la lista de tamaños
-def test_beverage_16():
+def test_beverage_17():
     assert new_beverage("DragonDrink",[12,24,36]) == "Valid beverage"
 
 # El siguiente caso de prueba evita que se procesen las pruebas
-# def test_beverage_17():
+# def test_beverage_18():
 #     assert new_beverage("DragonDrink",[12,,24,36]) == "Valid beverage"
